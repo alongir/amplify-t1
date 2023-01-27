@@ -1,0 +1,19 @@
+{
+    "AppSyncApiName": "Test1",
+    "DynamoDBBillingMode": "PAY_PER_REQUEST",
+    "DynamoDBEnableServerSideEncryption": false,
+    "AuthCognitoUserPoolId": {
+        "Fn::GetAtt": [
+            "authTest1",
+            "Outputs.UserPoolId"
+        ]
+    },
+    "authRoleName": {
+        "Ref": "AuthRoleName"
+    },
+    "unauthRoleName": {
+        "Ref": "UnauthRoleName"
+    },
+    "S3DeploymentBucket": "amplify-test1-staging-63502-deployment",
+    "S3DeploymentRootKey": "amplify-appsync-files/edd41bc545ceb983ebd40c7191e671e5b76e7494"
+}
